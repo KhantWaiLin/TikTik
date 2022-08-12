@@ -16,6 +16,7 @@ const Upload = () => {
 
   const router = useRouter();
   const {userProfile}:{userProfile:any} = useAuthStore();
+  const [topic, setTopic] = useState<String>(topics[0].name);
   const [isLoading, setIsLoading] = useState(false);
   const [videoAsset,setVideoAsset] = useState<SanityAssetDocument | undefined>();
   const [wrongFileType,setWrongFileType] = useState(false);
@@ -74,6 +75,12 @@ const Upload = () => {
     }
     
   }
+  const handleDiscard = () => {
+    setSavingPost(false);
+    setVideoAsset(undefined);
+    setCaption('');
+    setTopic('');
+  };
 
   return (
     <div 
@@ -175,7 +182,7 @@ const Upload = () => {
                </select>
                <div className='flex gap-6 mt-10'>
                 <button
-                 onClick={()=>{}}
+                 onClick={handleDiscard}
                  type="button"
                  className='border-gray-300 border-2 text-md
                  font-medium p-2 rounded w-28 xl:w-44 outline-none'
