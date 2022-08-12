@@ -77,10 +77,8 @@ const Upload = () => {
 
   return (
     <div 
-    className='flex w-full h-full absolute left-0 top-[60px]
-    mb-10 pb-10 lg:pt-20 bg-[#F8F8F8] justify-center'>
-        <div className='bg-white rounded-lg xl:h-[80vh] w-[70%] flex gap-6 items-center justify-between
-        p-14 pt-6'>
+    className='flex w-full h-full absolute left-0 top-[60px] lg:top-[70px] mb-10 pt-10 lg:pt-20 bg-[#F8F8F8] justify-center'>
+        <div className=' bg-white rounded-lg xl:h-[80vh] flex gap-6 flex-wrap justify-center items-center p-14 pt-6'>
           <div>
             <div>
               <p className='text-2xl font-bold'>Upload Video</p>
@@ -148,7 +146,7 @@ const Upload = () => {
 
 
           </div>
-            <div className='flex flex-col gap-3'>
+            <div className='flex  flex-col gap-3 '>
               <label className='text-md font-medium'>Caption</label>
               <input
               className='rounded outline-none text-md border-2 border-gray-200
